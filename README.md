@@ -6,8 +6,9 @@ Sample for In-App Billing version 3
 Introduction
 ------------
 
-This sample is provided to demonstrate Google Play In-app Billing. To read
-more visit https://developer.android.com/google/play/billing/index.html
+This sample forked from: https://github.com/googlesamples/android-play-billing
+This sample is provided to demonstrate Avvalmarket In-app Billing. 
+## To read more visit https://developer.android.com/google/play/billing/index.html
 
 This game is a simple "driving" game where the player can buy gas
 and drive. The car has a tank which stores gas. When the player purchases
@@ -21,29 +22,20 @@ The user can also purchase a subscription ("infinite gas") that allows them
 to drive without using up any gas while that subscription is active. The
 subscription can either be purchased monthly or yearly.
 
-Pre-requisites
---------------
-
-- [Documentation](https://developer.android.com/google/play/billing/billing_overview.html)
-
-Screenshots
------------
-![Screenshot1](playstore/screenshot1.png)
-
 Getting Started
 ---------------
 
 This sample can't be run as-is. You have to create your own
-application instance in the Developer Console and modify this
+application instance in the Avvalmarket Developer Console and modify this
 sample to point to it. Here is what you must do:
 
-ON THE GOOGLE PLAY DEVELOPER CONSOLE
+ON THE Avvalmarket DEVELOPER CONSOLE
 
 1. Create an application on the Developer Console, available at
-   https://play.google.com/apps/publish/.
+   https://developer.avvalmarket.ir
 
 2. Copy the application's public key (a base-64 string). You can find this in
-   the "Services & APIs" section under "Licensing & In-App Billing".
+   apps --> list --> key icon
 
 IN THE CODE
 
@@ -56,48 +48,44 @@ IN THE CODE
 
 5. Export an APK, signing it with your PRODUCTION (not debug) developer certificate.
 
-BACK TO THE GOOGLE PLAY DEVELOPER CONSOLE
+BACK TO THE Avvalmarket DEVELOPER CONSOLE
 
-6. Upload your APK to Google Play for Alpha Testing.
+6. Upload your APK to Avvalmarket.
 
-7. Make sure to add your test account (the one you will use to test purchases)
-   to the "testers" section of your app. Your test account CANNOT BE THE SAME AS
-   THE PUBLISHER ACCOUNT. If it is, your purchases won't go through.
-
-8. Under In-app Products, create MANAGED in-app items with these IDs:
+7. Under In-app Products, create MANAGED in-app items with these IDs:
        premium, gas
-   Set their prices to 1 dollar. You can choose a different price if you like.
+   Set their prices.
 
-9. Under In-app Products, create SUBSCRIPTION items with these IDs:
+8. Under In-app Products, create SUBSCRIPTION items with these IDs:
        infinite_gas_monthly, infinite_gas_yearly
-   Set their prices to 1 dollar and the billing recurrence to monthly for
+   Set their prices and the billing recurrence to monthly for
    infinite_gas_monthly and yearly for infinite_gas_yearly. To prevent being charged
    while testing, set the trial period to 7 days.
 
-10. Publish your APK to the Alpha channel. Wait 2-3 hours for Google Play to process the APK
-   If you don't wait for Google Play to process the APK, you might see errors where Google Play
+9. Publish your APK to the Alpha channel. Wait 2-3 hours for Avvalmarket to process the APK
+   <!--If you don't wait for Google Play to process the APK, you might see errors where Google Play
    says that "this version of the application is not enabled for in-app billing" or something
    similar. Ensure that the In-App products move to the "Active" state within the console before
-   testing.
+   testing.-->
 
 TEST THE CODE
 
 11. Install the APK signed with your PRODUCTION certificate, to a
-test device [*].
+test device <!--[*]-->.
 12. Run the app.
 13. Make purchases using the test account you added in Step 7.
 
-Remember to refund any real purchases you make, if you don't want the
+<!--Remember to refund any real purchases you make, if you don't want the
 charges to actually to through. Remember, you can use the tester functionality within
 the Google Play console to define test Google Accounts that won't be charged.
 When using the tester functionality make sure to look for "Test" language appended
 to each receipt. If you don't see "Test" then you will need to be sure to refund/cancel
-the charge.
-
+the charge.-->
+<!--
 [*]: it will be easier to use a test device that doesn't have your
 developer account logged in; this is because, if you attempt to purchase
 an in-app item using the same account that you used to publish the app,
-the purchase will not go through.
+the purchase will not go through.-->
 
 A NOTE ABOUT SECURITY
 ---------------------
@@ -112,14 +100,6 @@ http://developer.android.com/google/play/billing/billing_best_practices.html
 In particular, you should set developer payload strings when making purchase
 requests and you should verify them when reading back the results. This will make
 it more for a malicious party to perform a replay attack on your app.
-
-Support
--------
-If you've found an error in this sample, please file an issue:
-https://github.com/googlesamples/android-play-billing/issues
-
-Patches are encouraged, and may be submitted by forking this project and
-submitting a pull request through GitHub.
 
 License
 -------
