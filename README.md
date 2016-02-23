@@ -8,7 +8,7 @@ Introduction
 
 This sample forked from: https://github.com/googlesamples/android-play-billing
 This sample is provided to demonstrate Avvalmarket In-app Billing. 
-## To read more visit https://developer.android.com/google/play/billing/index.html
+<!--To read more visit https://developer.android.com/google/play/billing/index.html-->
 
 This game is a simple "driving" game where the player can buy gas
 and drive. The car has a tank which stores gas. When the player purchases
